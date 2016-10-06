@@ -38,28 +38,35 @@
 }
 
 // ===== responsive =====
-@mixin desktop {
+//desktop
+@mixin m1200 {
   @media screen and (max-width: 1200px) {
     @content;
   }
 }
-@mixin laptop {
+@mixin m1024 {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+//laptop
+@mixin m992 {
   @media screen and (max-width: 992px) {
     @content;
   }
 }
-@mixin tablets {
+//tablets
+@mixin m768 {
   @media screen and (max-width: 768px) {
     @content;
   }
 }
-@mixin phones {
+//phones
+@mixin m425 {
   @media screen and (max-width: 425px) {
     @content;
   }
 }
-
-
 
 
 // ===== placeholder color =====

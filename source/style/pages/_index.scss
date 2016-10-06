@@ -17,7 +17,7 @@
   background: transparent;
 
   @include roboto(medium);
-  @include phones() {
+  @include m425() {
     right: 0;
     left: 0;
     width: 200px;
@@ -68,7 +68,7 @@
   }
 }
 .welcome__copyright {
-  @include phones() {
+  @include m425() {
     padding: 10px;
     .welcome__copyright--name {
       display: block;
