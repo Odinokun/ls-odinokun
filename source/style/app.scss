@@ -1,23 +1,18 @@
-body {
-  margin: 0;
-  background-color: #faf8f0;
-}
-
 // base
 @import 'base/fonts';
-@import '../style/vendor/sprite';
 @import 'base/variables';
 @import 'base/mixins';
+@import '../../bower_components/singularity/stylesheets/singularitygs';
+// @import '../../bower_components/breakpoint-sass/stylesheets/breakpoint';
 @import 'base/base';
 
 //common
 @import 'common/social-icons';
-@import 'common/my-card';
 @import 'common/header';
 @import 'common/footer';
+@import 'common/my-card';
+@import 'common/welcome-banner__front';
+@import 'common/welcome-banner__back';
 
 //pages
 @import 'pages/index';
-@import 'pages/blog';
-@import 'pages/about';
-@import 'pages/works';

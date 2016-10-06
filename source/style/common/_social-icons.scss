@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
 
-  @include clearfix;
+  @extend %clearfix;
 }
 .social-icons__item {
   display: block;

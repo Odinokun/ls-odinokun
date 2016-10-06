@@ -1,56 +1,81 @@
+%clearfix {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}
+
 @mixin roboto($style : regular) {
-    @if $style == regular {
-        font-family: 'Roboto-Regular', Arial, sans-serif;
-    }
+  @if $style == regular {
+    font-family: 'Roboto-Regular', Arial, sans-serif;
+  }
 
-    @if $style == bold {
-        font-family: 'Roboto-Bold', Arial, sans-serif;
-    }
+  @if $style == bold {
+    font-family: 'Roboto-Bold', Arial, sans-serif;
+  }
 
-    @if $style == light {
-        font-family: 'Roboto-Light', Arial, sans-serif;
-    }
+  @if $style == light {
+    font-family: 'Roboto-Light', Arial, sans-serif;
+  }
 
-    @if $style == medium {
-        font-family: 'Roboto-Medium', Arial, sans-serif;
-    }
+  @if $style == medium {
+    font-family: 'Roboto-Medium', Arial, sans-serif;
+  }
 
-    @if $style == italic {
-        font-family: 'Roboto-Italic', Arial, sans-serif;
-    }
+  @if $style == italic {
+    font-family: 'Roboto-Italic', Arial, sans-serif;
+  }
 }
 
 @mixin sansus($style : regular) {
-    @if $style == regular {
-        font-family: 'SansusWebissimo', Arial, sans-serif;
-    }
+  @if $style == regular {
+    font-family: 'SansusWebissimo', Arial, sans-serif;
+  }
 }
 
-@mixin clearfix {
-    &::before,
-    &::after {
-        content: "";
-        display: table;
-    }
-    &::after {
-        clear: both;
-    }
+// ===== responsive =====
+@mixin desktop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
 }
+@mixin laptop {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+@mixin tablets {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phones {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+
+
+
 
 // ===== placeholder color =====
 @mixin placecolor($color: #5f5f5f) {
-    &::-webkit-input-placeholder {
-        color: $color;
-    }
-    &:-moz-placeholder {
-        color: $color;
-    }
-    &::-moz-placeholder {
-        color: $color;
-    }
-    &:-ms-input-placeholder {
-        color: $color;
-    }
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  &:-moz-placeholder {
+    color: $color;
+  }
+  &::-moz-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
 }
 
 

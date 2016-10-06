@@ -10,7 +10,8 @@ module.exports = function() {
       }))
       .pipe($.gp.cheerio({
         run: function ($) {
-          $('[fill]').removeAttr('fill');
+          // $('[fill]').removeAttr('fill');
+          $('[fill][fill!="none"]').removeAttr('fill');
           $('[stroke]').removeAttr('stroke');
           $('[style]').removeAttr('style');
         },

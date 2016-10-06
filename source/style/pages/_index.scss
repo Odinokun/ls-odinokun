@@ -1,317 +1,81 @@
 .welcome {
-  display: flex;
-  background: #223b65 url('../img/bg-welcome.jpg') 50% 100%/cover no-repeat;
-}
-.welcome-container {
-  display: flex;
-
-  perspective: 600px;
-  align-items: center;
-  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #223b65 url('../img/mount.png') 50% 100%/contain no-repeat;
 }
 .welcome-btn {
+  font-size: 16px;
   position: absolute;
+  z-index: 10;
   top: 25px;
   right: 100px;
   padding: 10px 27px;
   cursor: pointer;
   transition: all .5s;
-  color: $t-light;
+  color: #fff;
   border: 1px solid #fff;
   background: transparent;
 
   @include roboto(medium);
-  @include font-size(16px);
+  @include phones() {
+    right: 0;
+    left: 0;
+    width: 200px;
+    margin: auto;
+  }
   &:hover {
     transition: all .5s;
     color: $brand;
     background-color: #fff;
   }
 }
-.welcome-banner__wrap {
-  position: relative;
-  width: 100%;
-  max-width: 380px;
-  transition: transform 2s;
-
-  transform-style: preserve-3d;
-  &.active {
-    transition: transform 2s;
-    transform: rotateY( 180deg );
-  }
-}
-.welcome-banner {
-  margin: auto;
-  padding: 40px 10px 0 10px;
-  transform: rotateY( 0deg );
-  text-align: center;
-  background-color: rgba(28,31,41,.5);
-
-  backface-visibility: hidden;
-  &__list {
-    margin: 35px -10px 0 -10px;
-    padding: 0;
-
-    @include clearfix;
-  }
-  &__item {
-    position: relative;
-    float: left;
-    list-style: none;
-    transition: all .5s;
-    background-color: $brand;
-    &--work {
-      width: 41%;
-      border-right: 2px solid #7296d2;
-    }
-    &--about {
-      width: 34%;
-      border-right: 2px solid #7296d2;
-    }
-    &--blog {
-      width: 25%;
-    }
-    &:hover {
-      transition: all .5s;
-      background-color: $brand-dark;
-    }
-  }
-  &__link {
-    display: block;
-    padding: 10px 5px;
-    text-decoration: none;
-    color: $t-light;
-
-    @include roboto(medium);
-    @include font-size(16px);
-    &:hover {
-      color: $t-light;
-    }
-    &:focus {
-      text-decoration: underline;
-      color: $t-light;
-      outline: none;
-    }
-  }
-}
-
-.welcome-form {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  padding: 30px 20px 0 20px;
-  transition: transform 2s;
-  transform: rotateY( 180deg );
-  text-align: center;
-  color: #fff;
-  background-color: rgba(28,31,41,.5);
-
-  backface-visibility: hidden;
-  &__title {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-
-    @include font-size(35px);
-    @include sansus(regular);
-  }
-  &__input--wrap {
-    position: relative;
-    width: 100%;
-    margin: 10px 0 22px 0;
-    &::before {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      display: block;
-      width: 45px;
-      margin: auto;
-      content: '';
-      background-color: #f0efe9;
-    }
-    &::after {
-      position: absolute;
-      z-index: 2000000;
-      top: 0;
-      bottom: 0;
-      left: 14px;
-      display: block;
-      margin: auto;
-      content: '';
-
-      @extend .icon-login;
-    }
-  }
-  &__input {
-    width: 100%;
-    padding: 10px 10px 10px 55px;
-    border: none;
-  }
-  &__list {
-    margin: 35px -20px 0 -20px;
-    padding: 0;
-
-    @include clearfix;
-  }
-  &__item {
-    position: relative;
-    float: left;
-    width: 50%;
-    list-style: none;
-    transition: all .5s;
-    border-right: 2px solid #7296d2;
-    background-color: $brand;
-    &:last-child {
-      border-right: none;
-    }
-    &:hover {
-      transition: all .5s;
-      background-color: $brand-dark;
-    }
-  }
-  &__link {
-    display: block;
-    padding: 10px 5px;
-    text-decoration: none;
-    color: $t-light;
-
-    @include roboto(medium);
-    @include font-size(16px);
-    &:hover {
-      color: $t-light;
-    }
-    &:focus {
-      text-decoration: underline;
-      color: $t-light;
-      outline: none;
-    }
-  }
-}
-.welcome-form__fieldset {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  input {
-    width: 100%;
-    outline: none;
-  }
-}
-
-.welcome-footer {
+.welcome__footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   text-align: center;
-  .copyright {
-    display: inline-block;
-    max-width: 1200px;
-    padding: 40px 10px;
-    color: #fff;
+}
+.welcome__copyright {
+  font-size: 16px;
+  display: inline-block;
+  max-width: 1200px;
+  padding: 40px 10px;
+  color: #fff;
 
-    @include roboto(light);
-    @include font-size(16px);
-    span {
-      position: relative;
-      margin-right: 12px;
-      &:last-child {
-        margin-right: 0;
-        &:after {
-          display: none;
-        }
-      }
+  @include roboto(light);
+  span {
+    position: relative;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
       &:after {
-        position: absolute;
-        right: -11px;
-        bottom: 2px;
-        display: block;
-        width: 2px;
-        height: 14px;
-        margin: 0 4px;
-        content: '';
-        opacity: .7;
-        background-color: #fff;
+        display: none;
       }
+    }
+    &:after {
+      position: absolute;
+      right: -11px;
+      bottom: 2px;
+      display: block;
+      width: 2px;
+      height: 14px;
+      margin: 0 4px;
+      content: '';
+      opacity: .7;
+      background-color: #fff;
     }
   }
 }
-
-.welcome-form__checkbox--label {
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
-  margin-right: 15px;
-  padding-left: 25px;
-  cursor: pointer;
-  &:before {
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    content: '';
-    border-radius: 2px;
-    background-color: #fff;
+.welcome__copyright {
+  @include phones() {
+    padding: 10px;
+    .welcome__copyright--name {
+      display: block;
+      margin-bottom: 5px;
+      &:after {
+        display: none;
+      }
+    }
   }
-}
-.welcome-form__checkbox {
-  display: none;
-}
-.welcome-form__checkbox--label:before {
-  border-radius: 2px;
-}
-.welcome-form__checkbox:checked + .welcome-form__checkbox--label:before {
-  font-size: 18px;
-  line-height: 18px;
-  content: '\2713';
-  text-align: center;
-  color: #fff;
-  background-color: #0548be;
-}
-.welcome-form__fieldset {
-  &.checkbox {
-    margin-bottom: 10px;
-  }
-}
-.welcome-form__legend {
-  font-size: 16px;
-  margin-bottom: 10px;
-
-  @include roboto(bold);
-}
-.welcome-form__radio--label {
-  font-size: 16px;
-  position: relative;
-  display: inline-block;
-  margin: 0 20px;
-  padding-left: 25px;
-  cursor: pointer;
-
-  @include roboto(medium);
-  &:before {
-    position: absolute;
-    bottom: 1px;
-    left: 0;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    content: '';
-    border-radius: 10px;
-    background-color: #fff;
-  }
-}
-.welcome-form__radio {
-  display: none;
-}
-.welcome-form__radio:checked + label:before {
-  font-size: 36px;
-  line-height: 20px;
-  content: '\2022';
-  text-align: center;
-  color: #0548be;
 }

@@ -7,3 +7,46 @@ block content
   section.welcome
     section.container
       button.welcome-btn Авторизоваться
+
+    .welcome-banner__wrap
+      .welcome-banner__front
+        include ../common/_my-card
+        include ../common/_social-icons
+        ul.wb-front__list
+          li.wb-front__item.work
+            a(href="works.html").wb-front__link Мои работы
+          li.wb-front__item.about
+            a(href="/about.html").wb-front__link Обо мне
+          li.wb-front__item.blog
+            a(href="/blog.html").wb-front__link Блог
+
+      .welcome-banner__back
+        h2.wb-back__title Авторизуйтесь
+        form(action="")
+          fieldset.wb-back__fieldset.input
+            .wb-back__input--wrap
+              input.wb-back__input.login(type="text", placeholder="Логин")
+            .wb-back__input--wrap
+              input.wb-back__input.password(type="password", placeholder="Пароль")
+
+          fieldset.wb-back__fieldset.checkbox
+            input(type="checkbox").wb-back__checkbox#human
+            label(for="human").wb-back__checkbox--label Я человек
+
+          fieldset.wb-back__fieldset.radio
+            legend.wb-back__legend Вы точно не робот?
+            input(type="radio" name="urobot").wb-back__radio#robot-yes
+            label(for="robot-yes").wb-back__radio--label Да
+            input(type="radio" name="urobot").wb-back__radio#robot-no
+            label(for="robot-no").wb-back__radio--label Не уверен
+        ul.wb-back__list
+          li.wb-back__item
+            a(href="index.html").wb-back__link На главную
+          li.wb-back__item
+            a(href="#").wb-back__link Войти
+
+    footer.welcome__footer
+      .welcome__copyright
+        span.welcome__copyright--name &#169; Дмитрий Гордиенко
+        span создано с любовью в LoftSchool
+        span 2016

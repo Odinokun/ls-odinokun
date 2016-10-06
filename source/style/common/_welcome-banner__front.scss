@@ -1,0 +1,70 @@
+.welcome-banner__wrap {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  left: 10px;
+  max-width: 380px;
+  margin: auto;
+  transition: transform 2s;
+
+  transform-style: preserve-3d;
+  &.active {
+    transition: transform 2s;
+    transform: rotateY( 180deg );
+  }
+}
+.welcome-banner__front {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  padding: 40px 10px 0 10px;
+  transform: translate(0%, -50%) rotateY(0deg);
+  text-align: center;
+  background-color: rgba(28,31,41,.5);
+
+  backface-visibility: hidden;
+}
+.wb-front__list {
+  margin: 0;
+  margin: 35px -10px 0 -10px;
+  padding: 0;
+  padding: 0;
+
+  @extend %clearfix;
+}
+.wb-front__item {
+  position: relative;
+  float: left;
+  list-style: none;
+  transition: all .5s;
+  background-color: $brand;
+  &.work {
+    width: 41%;
+    border-right: 2px solid #7296d2;
+  }
+  &.about {
+    width: 34%;
+    border-right: 2px solid #7296d2;
+  }
+  &.blog {
+    width: 25%;
+  }
+  &:hover {
+    transition: all .5s;
+    background-color: $brand-dark;
+  }
+}
+.wb-front__link {
+  font-size: 16px;
+  display: block;
+  padding: 10px 5px;
+  text-decoration: none;
+  color: #fff;
+
+  @include roboto(medium);
+  &:hover {
+    color: #fff;
+  }
+}

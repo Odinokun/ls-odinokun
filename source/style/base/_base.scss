@@ -1,40 +1,34 @@
+@include sgs-change('debug', true); //debug
+
+
+@include add-grid(12);
+@include add-gutter(1/3);
+@include add-gutter-style('split');
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
-html {
-  font-size: 16px;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-}
+html,
 body {
-  line-height: 1.4;
-  display: flex;
-  flex-direction: column;
   width: 100%;
-  min-width: 320px;
   height: 100%;
-  color: #696969;
-
-  @include font-size(16px);
-  @include roboto(regular);
-}
-/* header, */
-.footer {
-  flex: 0 0 auto;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: 400;
   margin: 0;
   padding: 0;
+}
+html {
+  box-sizing: border-box;
+
+  @include tablets() {
+    font-size: 14px;
+  }
+}
+body {
+  min-width: 320px;
+  color: #696969;
+
+  @include roboto(regular);
 }
 h1,
 h2,
@@ -42,12 +36,8 @@ h3,
 h4,
 h5,
 h6 {
-  @include roboto(bold);
-}
-p {
-  color: #818181;
-
-  @include roboto(regular);
+  font-weight: 400;
+  margin: 0;
 }
 a {
   transition: .5s;
@@ -58,14 +48,11 @@ a {
     color: $brand;
   }
 }
-
-.wrapper {
-  flex: 1 0 auto;
-}
 .container {
   position: relative;
   width: 100%;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 20px 30px;
+
+  @include background-grid($color: #f00);
 }
