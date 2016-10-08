@@ -2,15 +2,19 @@ header.page-header
   .container
     .page-header__top
       include ../common/_social-icons
-      nav.top-menu
-        .top-menu__icon
-    div.page-header__ava
-      img(src='assets/img/ava.jpg')
+      a.menu-icon(href='#')
+        span
+    .page-header__ava--wrap
+      .page-header__ava
+        img.page-header__ava--img(src='assets/img/ava.jpg')
+      .page-header__signature
+        h2.page-header__title #{header__title}
+        p.page-header__subtitle #{header__subtitle}
   .triangle
-    .triangle__wrapper
-      .triangle__item
-        svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
-          polygon(points='0,0 200,100 0,100')
-      .triangle__item
-        svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
-          polygon(points='0,100 200,0 200,100')
+    .triangle__item
+      svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
+        polygon(points='0,0 200,100 0,100')
+    .triangle__item
+      svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
+        polygon(points='0,100 200,0 200,100')
+  include ../common/_arr-down

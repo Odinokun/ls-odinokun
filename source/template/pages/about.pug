@@ -2,7 +2,91 @@ extends ../_template
 
 block variables
   - var title = 'Обо мне'
+  - var header__title = 'Дмитрий Гордиенко'
+  - var header__subtitle = 'Личный сайт веб разработчика'
 
 block content
+  include ../common/_main-menu
+  .page-header__wrap.about
+    include ../common/_header
+
+
+  .container.about#top-section
+    section.about-left
+      header.about-left__header
+        h2.about-left__title Обо мне
+      article.about-left__article
+        .about-left__photo
+          img.about-left__photo-img(src="assets/img/ava.jpg")
+        h3.about-left__article--title Кто я
+        p.about-left__article--text Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+        p.about-left__article--text Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+    section.about-right
+      header.about-right__header
+        h3.about-right__title Чем я могу быть Вам полезен
+      p.about-right__text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+
+      article.about-right__article
+        h3.about-right__article--title Frontend
+        .about-right__article-skill
+          .text HTML5
+          input.front(type='text', value='80')
+        .about-right__article-skill
+          .text CSS3
+          input.front(type='text', value='70')
+        .about-right__article-skill
+          .text JavaScript &#38; jQuery
+          input.front(type='text', value='30')
+
+      article.about-right__article
+        h3.about-right__article--title Backend
+        .about-right__article-skill
+          .text PHP
+          input.back(type='text', value='65')
+        .about-right__article-skill
+          .text mySQL
+          input.back(type='text', value='65')
+        .about-right__article-skill
+          .text Node.js &#38; npm
+          input.back(type='text', value='65')
+        .about-right__article-skill
+          .text Mongo.db
+          input.back(type='text', value='65')
+
+      article.about-right__article
+        h3.about-right__article--title WorkFlow
+        .about-right__article-skill
+          .text Git
+          input.workflow(type='text', value='80')
+        .about-right__article-skill
+          .text Gulp
+          input.workflow(type='text', value='80')
+        .about-right__article-skill
+          .text Bower
+          input.workflow(type='text', value='80')
+
+  section.map-wrap
+    .contact-banner
+      header.contact-banner__header
+        h2.contact-banner__header--title Контакты
+      ul.contact-banner__list
+        li.contact-banner__item
+          a.contact-banner__link(href="skype:odinokun") odinokun
+            svg.contact-banner__svg
+              use(xlink:href="assets/img/sprite.svg#skype_n")
+        li.contact-banner__item
+          a.contact-banner__link(href="tel://+38 067 123 45 67") +38 067 123 45 67
+            svg.contact-banner__svg
+              use(xlink:href="assets/img/sprite.svg#phone_n")
+        li.contact-banner__item
+          a.contact-banner__link(href="mailto:odinokun@gmail.com") odinokun@gmail.com
+            svg.contact-banner__svg
+              use(xlink:href="assets/img/sprite.svg#mail_n")
+        li.contact-banner__item
+          a.contact-banner__link(href="https://goo.gl/maps/pTvUPKYR8932", target="_blank", rel="nofollow noopener noreferrer") г.Киев, ул.Крещатик, д.22
+            svg.contact-banner__svg
+              use(xlink:href="assets/img/sprite.svg#map_n")
+    #map
 
   include ../common/_footer

@@ -8,7 +8,7 @@
   width: 140px;
   height: 140px;
   margin-right: 5px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   border-radius: 50%;
   img {
     position: absolute;
@@ -23,6 +23,7 @@
 .my-card__title {
   font-size: 28px;
   color: #fff;
+  margin-bottom: 10px;
 
   @include roboto(medium);
 }
