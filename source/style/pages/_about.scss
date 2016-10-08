@@ -94,6 +94,10 @@
 
 .about-right {
   padding-left: 30px;
+
+  @include m768 {
+    padding-left: 0;
+  }
 }
 .about-right__header {
   max-width: 300px;
@@ -153,6 +157,13 @@
   display: inline-block;
   margin: 0 40px 10px 0;
   pointer-events: none;
+
+  @include m768 {
+    margin: 0 15px 10px 15px;
+  }
+  @include m425 {
+    margin: 0 10px 10px 10px;
+  }
   .text {
     font-size: 14px;
     line-height: 1;
