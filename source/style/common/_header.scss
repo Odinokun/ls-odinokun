@@ -74,6 +74,16 @@
 
   @include roboto(medium);
 }
+.page-header__bigtitle {
+  font-size: 63px;
+  line-height: 1;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include sansus(regular);
+}
 .page-header__subtitle {
   font-size: 16px;
   color: #fff;

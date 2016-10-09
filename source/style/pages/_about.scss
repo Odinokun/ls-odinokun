@@ -193,6 +193,9 @@
     height: 850px;
     margin-bottom: -200px;
   }
+  @include m425 {
+    margin-bottom: -350px;
+  }
 }
 .map-wrap {
   position: relative;
@@ -210,6 +213,11 @@
 
   @include m768 {
     transform: translate(-50%, -75%);
+  }
+  @include m425 {
+    position: static;
+    transform: none;
+    background-color: #fff;
   }
 }
 .contact-banner__header--title {
