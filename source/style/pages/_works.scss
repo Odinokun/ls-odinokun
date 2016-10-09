@@ -1,0 +1,124 @@
+.works-header {
+  background: #223b65 url('../img/mount.png') 50% 100% no-repeat;
+  .triangle__footer {
+    display: block;}
+  .svg-triangle polygon {
+    fill: rgba(13,17,32,.85);
+  }
+  .arr-down {
+    bottom: 220px;
+  }
+}
+
+.container.works {
+  // padding: 0;
+
+  // @include clearfix;
+}
+.works-string {
+  // position: relative;
+  // height: 180px;
+  // margin-top: -180px;
+  // text-align: center;
+  // background-color: rgba(0,0,0,.7);
+}
+.works-string__title {
+  // font-size: 63px;
+  // line-height: 180px;
+  // text-transform: uppercase;
+  // color: #fff;
+
+  // @include sansus(regular);
+}
+.works-left {
+  // position: relative;
+  // float: left;
+  // width: 50%;
+  // height: 100%;
+  // height: 750px;
+  // text-align: center;
+  &:before {
+    // display: inline-block;
+    // height: 100%;
+    // content: '';
+    // vertical-align: middle;
+  }
+}
+.works-left__banner {
+  // display: inline-block;
+  // vertical-align: middle;
+}
+.works-left__title {
+  // font-size: 35px;
+  // line-height: 1;
+  // position: relative;
+  // max-width: 350px;
+  // margin-bottom: 30px;
+  // padding-bottom: 25px;
+  // text-align: center;
+  // text-transform: uppercase;
+  // color: #373e42;
+
+  // @include sansus(regular);
+  &::after {
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    // display: block;
+    // width: 90px;
+    // height: 3px;
+    // margin: auto;
+    // content: '';
+    // background-color: #9c9d9f;
+  }
+}
+.works-left__subtitle {
+  // font-size: 16px;
+  // margin-bottom: 60px;
+  // text-transform: uppercase;
+  // color: $brand;
+
+  // @include roboto(medium);
+}
+
+.works-left__link {
+  // position: relative;
+  // display: inline-block;
+  // padding: 10px 20px 10px 50px;
+  // cursor: pointer;
+  // transition: .5s;
+  // color: #fff;
+  // border: 2px solid $brand;
+  // background-color: $brand;
+  &:hover {
+    // transition: .5s;
+    // color: $brand;
+    // background-color: transparent;
+    svg {
+      // transition: .5s;
+
+      // fill: $brand;
+    }
+  }
+  svg {
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // left: 20px;
+    // width: 20px;
+    // height: 20px;
+    // margin: auto;
+    // transition: .5s;
+
+    // fill: #fff;
+  }
+}
+
+.works-right {
+  // float: right;
+  // width: 50%;
+  // height: 750px;
+  // margin-right: -20px;
+}
+

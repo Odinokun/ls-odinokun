@@ -1,0 +1,34 @@
+extends ../_template
+
+block variables
+  - var title = 'Мои работы'
+  - var header__title = 'Дмитрий Гордиенко'
+  - var header__bigtitle = ''
+  - var header__subtitle = 'Личный сайт вебразработчика'
+
+block content
+  include ../common/_main-menu
+  .page-header__wrap.works-header
+    include ../common/_header
+
+  .container.works#top-section
+    .wrapper
+      //- .container.page-container.works
+        section.works-left
+          article.works-left__banner
+            h2.works-left__title Сайт школы онлайн образования
+            h3.works-left__subtitle HTML, Css, JavaScript
+            a.works-left__link Посмотреть сайт
+              svg
+                use(xlink:href="assets/img/sprite.svg#link")
+
+        section.works-right
+          .temp-img-slider
+            img(src="assets/img/slider-temp.jpg", alt="slider")
+
+
+
+
+  include ../common/_reviews
+
+  include ../common/_footer

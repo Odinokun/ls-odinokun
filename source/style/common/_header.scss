@@ -98,7 +98,11 @@
   width: 100%;
   margin: auto;
 
+  // @extend %clearfix;
+}
+.triangle__item--wrap {
   @extend %clearfix;
+
 }
 .triangle__item {
   width: 50%;
@@ -116,4 +120,17 @@
 }
 .svg-triangle polygon {
   fill: #faf8f0;
+}
+.triangle__footer {
+  display: none;
+  background-color: rgba(13,17,32,.85);
+  text-align: center;
+  padding: 60px 0;
+}
+.triangle__footer--text {
+  font-size: 63px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #fff;
+  @include sansus(regular);
 }

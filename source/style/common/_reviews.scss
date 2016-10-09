@@ -1,0 +1,61 @@
+.reviews {
+  margin-bottom: -170px;
+  padding-bottom: 200px;
+  background: #000 url('../img/bg-review.jpg') 50% 100%/cover no-repeat;
+}
+.reviews-header {
+  margin-bottom: 20px;
+  padding: 40px 10px;
+  text-align: center;
+}
+.revews-header__title {
+  font-size: 63px;
+  line-height: 1;
+  max-width: 400px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include sansus(regular);
+}
+.reviews-article--wrap {
+  max-width: 800px;
+  margin: 0 auto 65px;
+}
+.reviews-article {
+  display: inline-block;
+  width: 50%;
+  margin-right: -5px;
+  vertical-align: top;
+}
+.reviews-article__ava {
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+}
+.reviews-article__blockquote {
+  font-size: 16px;
+  margin: 10px 10px 30px 10px;
+  color: #fff;
+
+  @include roboto(italic);
+}
+.signature {
+  text-align: center;
+}
+.signature-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+
+  @include roboto(italic);
+}
+.signature-position {
+  font-size: 16px;
+  color: #fff;
+
+  @include roboto(italic);
+}
+

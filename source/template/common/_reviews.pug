@@ -1,0 +1,25 @@
+section.reviews
+  .container
+    header.reviews-header
+      h2.revews-header__title Что обо мне говорят
+
+    section.reviews-article--wrap
+      article.reviews-article
+        .reviews-article__ava
+          img.reviews-article__img(src="assets/img/ava-k.jpg", alt="avatar")
+        blockquote.reviews-article__blockquote.
+          Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+        .signature
+          p.signature-name Ковальчук Дмитрий
+          p.signature-position - основатель Loftschool
+
+      article.reviews-article
+        .reviews-article__ava
+          img.reviews-article__img(src="assets/img/ava-z.jpg", alt="avatar")
+        blockquote.reviews-article__blockquote.
+          Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+        .signature
+          p.signature-name Зар Захаров
+          p.signature-position - преподаватель
+
+    include ../common/_contact-form

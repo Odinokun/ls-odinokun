@@ -12,10 +12,13 @@ header.page-header
         h2.page-header__bigtitle #{header__bigtitle}
         p.page-header__subtitle #{header__subtitle}
   .triangle
-    .triangle__item
-      svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
-        polygon(points='0,0 200,100 0,100')
-    .triangle__item
-      svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
-        polygon(points='0,100 200,0 200,100')
+    .triangle__item--wrap
+      .triangle__item
+        svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
+          polygon(points='0,0 200,100 0,100')
+      .triangle__item
+        svg.svg-triangle(xmlns='http://www.w3.org/2000/svg', version='1.1', viewBox="0 0 200 100", preserveAspectRatio="none")
+          polygon(points='0,100 200,0 200,100')
+    .triangle__footer
+      h2.triangle__footer--text Мои работы
   include ../common/_arr-down
