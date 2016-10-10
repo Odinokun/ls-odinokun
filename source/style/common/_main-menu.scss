@@ -84,9 +84,6 @@
     transition: .5s;
     opacity: 1;
   }
-  &.active {
-    pointer-events: none;
-  }
 }
 .main-menu__link {
   font-size: 63px;

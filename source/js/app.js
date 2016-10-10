@@ -1,21 +1,16 @@
 //loader
-// $(window).on('load', function() {
-
-// });
 $(function() {
   var imgs = [];
 
   $.each($('*'), function() { //перебираем все селекторы
     var
       $this = $(this),
-      background = $this.css('background-image');
+      background = $this.css('background-image'),
       img = $this.is('img'); //проверяем картинка ли это
 
     if (background != 'none') {
       var path = background.replace('url("', '').replace('")', '');
       imgs.push(path); //добавляем пути к фонам в массив
-
-
     }
 
     if (img) {
@@ -25,8 +20,6 @@ $(function() {
         imgs.push(path); //добавляем его в массив
       }
     }
-
-
   });
 
   var percentsTotal = 1;
@@ -65,7 +58,86 @@ $(function() {
 
     $('.preloader__percents').text(percent + '%');
   }
+});
 
+
+//------ slider ------//
+$(function() {
+
+  var counter = 1;
+  var flag = true; //для блокировки кнопки next
+
+  $('.slider__controls-top').on('click', function(e) {
+    e.preventDefault();
+    console.log("click");
+
+    var
+        $this = $(this),
+        //через метод closest ограничиваемся блоком .slider
+        container = $this.closest('.slider'),
+        //находим все наши item
+        items = container.find('.slider__item'),
+        // с помощью метода filter выберем item.active
+        activeItem = items.filter('.active'),
+        // продолжительность нашей аннимации
+        duration = 1000;
+
+    var
+      oppositeItems = $('.slider__opposite .slider__item'),
+      oppositeActive = oppositeItems.filter('.active');
+
+
+    if (flag) {
+      //после клика - блокируем кнопку
+      flag = false;
+
+      //перебираем счетчиком слайды для закольцовки
+      if (counter >= items.length) {
+        counter = 0;
+      }
+
+      //метод eq возвращает элемент из набора
+      var reqItem = items.eq(counter);
+      var oppositeReqItem = oppositeItems.eq(counter);
+
+      activeItem.animate({
+        'top' : '100%'
+      }, duration);
+
+      //анимация второго слайдера
+      oppositeActive.animate({
+        'top' : '-100%'
+      }, duration, function() {
+
+      });
+
+
+      reqItem.animate({
+        'top' : '0%'
+      }, duration, function() {
+        //удаляем у активного объескта active и возвращаем его на исходное место
+        activeItem.removeClass('active').css('top', '-100%');
+        //добавляем active для текущего слайда
+        $(this).addClass('active');
+        //включаем кнопку
+        flag = true;
+      });
+
+
+      oppositeReqItem.animate({
+        'top' : '0%'
+      }, duration, function() {
+        oppositeActive.removeClass('active').css('top', '100%');
+        $(this).addClass('active');
+        flag = true;
+      });
+
+      counter++;
+    }
+
+
+
+  });
 });
 
 
