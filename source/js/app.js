@@ -1,4 +1,5 @@
 //loader
+// var test = "odinokun";
 $(function() {
   var imgs = [];
 
@@ -139,8 +140,6 @@ $(function() {
 
   });
 });
-
-
 
 
 // toggle class active in welcome-banner

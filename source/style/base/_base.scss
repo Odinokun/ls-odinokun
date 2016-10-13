@@ -53,3 +53,32 @@ a {
 .fix {
   overflow: hidden;
 }
+
+
+.video-wrap {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &::after {
+    content: "";
+    display: block;
+    height: 50%;
+    background-color: #f00;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+}
+video {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}

@@ -1,10 +1,10 @@
 .contact-form__wrap
   header.contact-form__header
     h2.contact-form__title Связаться со мной
-  form.contact-form
-    input.contact-form__input(type="text", placeholder="Ваше имя", name="name", required)
-    input.contact-form__input(type="email", placeholder="Ваш email", name="email", required)
-    textarea.contact-form__textarea(type="text", placeholder="Ваше сообщение", name="message", rows="5")
+  form.contact-form#contact-form
+    input.contact-form__input(type="text",    placeholder="Ваше имя",       name="name",    id="name",    data-position="right", data-content="Вы не ввели имя")
+    input.contact-form__input(type="email",   placeholder="Ваш email",      name="email",   id="email",   data-position="right", data-content="Вы не ввели email")
+    textarea.contact-form__textarea(rows="5", placeholder="Ваше сообщение", name="message", id="message", data-position="right", data-content="Вы не ввели Ваше сообщение")
     span.contact-form__input--wrap
       input.contact-form__submit(type="submit", value="Отправить")
-      input.contact-form__reset(type="reset", value="Очистить")
+      input.contact-form__reset(  type="reset", value="Очистить")

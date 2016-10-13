@@ -1,4 +1,9 @@
 header.page-header
+  //- .video-wrap
+    video(autoplay loop)
+      source(src='assets/video/night.mp4')
+      source(src='assets/video/night-opt.webm')
+
   .container
     .page-header__top
       include ../common/_social-icons
@@ -6,7 +11,7 @@ header.page-header
         span
     .page-header__ava--wrap
       .page-header__ava
-        img.page-header__ava--img(src='assets/img/ava.jpg')
+        img.page-header__ava--img(src='assets/img/ava.jpg', alt="avatar")
       .page-header__signature
         h2.page-header__title #{header__title}
         h2.page-header__bigtitle #{header__bigtitle}
