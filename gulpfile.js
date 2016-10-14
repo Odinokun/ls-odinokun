@@ -30,6 +30,7 @@ $.gulp.task('default', $.gulp.series(
     'pug',
     'js:foundation',
     'js:process',
+    'browserify',
     'copy:fonts',
     'copy:php',
     'copy:video',

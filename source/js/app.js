@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
   //welcome-active
   require('./modules/welcome-active')();
 });
