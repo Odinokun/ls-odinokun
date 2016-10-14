@@ -18,7 +18,7 @@
         //наша форма
     var $form = $(this),
         //URL того, куда надо отправлять AJAX запрос
-        url = '',
+        url = 'assets/php/ajax.php',
         //отложенный запрос (выполняем ajax запрос)
         defObject = ajaxForm($form, url);
   }
@@ -30,12 +30,35 @@
       return false;
     }
     console.log('отправка AJAX');
+
+
     //тут будет ajax запрос
+    data = form.serialize();
+
+    console.log(data);
+
+    var result = $.ajax({
+      url: url,
+      type: 'POST',
+      dataType: 'json',
+      data: data,
+    })
+    .done(function(ans) {
+      console.log('Успешно отправлено');
+      console.log(ans);
+    })
+    .fail(function(ans) {
+      console.log('Проблемы с ПХП');
+    })
+    .always(function() {
+      console.log('Завершено');
+    });
+
+    return result;
   }
 
   //инициализируем публичные методы
   function init() {
-    console.log('init');
     my.publicMethod();
   }
 
@@ -43,7 +66,6 @@
     //сюда набиваем публичные методы
     my = {
       publicMethod: function() {
-        console.log('Public');
       }
     }
   }
