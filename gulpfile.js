@@ -14,6 +14,8 @@ global.$ = {
   merge: require('merge-stream'),
   rimraf: require('rimraf'),
   browserSync: require('browser-sync').create(),
+  browserify: require('browserify'),
+  sourceStream: require('vinyl-source-stream'),
   gp: require('gulp-load-plugins')()
 };
 

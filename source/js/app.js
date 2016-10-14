@@ -1,3 +1,8 @@
+$(function () {
+  //welcome-active
+  require('./modules/welcome-active')();
+});
+
 //loader
 // var test = "odinokun";
 $(function() {
@@ -143,9 +148,9 @@ $(function() {
 
 
 // toggle class active in welcome-banner
-$('.welcome-btn').on('click', function() {
-    $('.welcome-banner__wrap').toggleClass('active');
-});
+// $('.welcome-btn').on('click', function() {
+//     $('.welcome-banner__wrap').toggleClass('active');
+// });
 
 //top-menu__icon
 $('.menu-icon').on('click', function() {
