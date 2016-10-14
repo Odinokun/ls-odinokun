@@ -37,13 +37,17 @@
 }
 .reviews-article__blockquote {
   font-size: 16px;
-  margin: 10px 10px 30px 10px;
+  margin: 10px 10px 10px 10px;
   color: #fff;
 
   @include roboto(italic);
 }
 .signature {
   text-align: center;
+  margin-top: 30px;
+}
+.signature__link {
+  text-decoration: none;
 }
 .signature-name {
   font-size: 16px;

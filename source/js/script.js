@@ -44,15 +44,11 @@
       data: data,
     })
     .done(function(ans) {
-      console.log('Успешно отправлено');
-      console.log(ans);
+      console.log('Ураааа! Успешно отправлено');
     })
     .fail(function(ans) {
       console.log('Проблемы с ПХП');
     })
-    .always(function() {
-      console.log('Завершено');
-    });
 
     return result;
   }
